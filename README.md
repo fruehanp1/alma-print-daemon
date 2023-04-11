@@ -12,6 +12,6 @@ The extension's configuration settings include:
 
 Requires at least Alma March 2020 release.
 
-Microsoft Windows and macOS versions available.
+Microsoft Windows and macOS versions available. This repo is building a linux compatible version.
 
 https://github.com/ExLibrisGroup/alma-print-daemon/releases/
