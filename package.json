@@ -4,28 +4,18 @@
   "description": "Application which listens for and prints letters from the Ex Libris Alma printout queues.",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron . --no-sandbox"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/ExLibrisGroup/alma-print-daemon.git"
-  },
-  "mac": {
-    "hardenedRuntime": "true",
-    "gatekeeperAssess": false,
-    "entitlements": "build/entitlements.mac.plist",
-    "entitlementsInherit": "build/entitlements.mac.plist"
-  },
-  "dmg": {
-    "sign": false
   },
   "build": {
     "nsis": {
       "runAfterFinish": "false",
       "oneClick": "false",
       "perMachine": "false"
-    },
-    "afterSign": "scripts/notarize.js"
+    }
   },
   "keywords": [
     "Alma",
@@ -39,8 +29,6 @@
   },
   "dependencies": {
     "electron-log": "^4.2.2",
-    "electron-notarize": "^0.2.1",
-    "electron-updater": "^4.3.4",
     "electron-window-manager": "^1.0.6",
     "request": "^2.88.2"
   }
