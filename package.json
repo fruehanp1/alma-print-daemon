@@ -4,13 +4,15 @@
   "description": "Application which listens for and prints letters from the Ex Libris Alma printout queues.",
   "main": "main.js",
   "scripts": {
-    "start": "electron . --no-sandbox"
+    "start": "electron . --no-sandbox",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/ExLibrisGroup/alma-print-daemon.git"
   },
-  "build": {
+  "build": {    
     "nsis": {
       "runAfterFinish": "false",
       "oneClick": "false",
@@ -25,9 +27,10 @@
   "license": "BSD-3-Clause",
   "devDependencies": {
     "electron": "^9.4.2",
-    "electron-builder": "^22.9.1"
+    "electron-builder": "^23.6.0"
   },
   "dependencies": {
+    "almarestapi-lib": "^1.1.9",
     "electron-log": "^4.2.2",
     "electron-window-manager": "^1.0.6",
     "request": "^2.88.2"
